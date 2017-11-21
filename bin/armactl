@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+libexec_path = File.join(File.dirname(__FILE__), '../libexec')
+commands = Dir[File.join(libexec_path, 'armactl-*')].map { |path| path[/armactl-(.*)\z/, 1] }.sort
+command = ARGV[0]
+
+if commands.include?(command)
+  exec File.join(libexec_path, "armactl-#{command}"), *ARGV[1..-1]
+else
+  $stderr.puts "usage: armactl <#{commands.join(' | ')}> ..."
+  exit 1
+end

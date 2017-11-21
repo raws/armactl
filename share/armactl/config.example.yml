@@ -1,0 +1,26 @@
+# Optional: Tell armactl where to find your Steam library and SteamCMD
+# steam:
+#   home: ~/.steam
+#   steamcmd: /usr/games/steamcmd
+
+mods:
+  example:
+    workshop_id: 1
+    folder: '@Example'
+
+missions:
+  Example.Altis:
+    url: https://example.com/Example.Altis.pbo
+    sha256: 3eefae272ec65063c55cd9b40cd40449cdf325749e310fe442901fef83860671
+
+servers:
+  vanilla: &vanilla
+    name: My Vanilla Server
+    password: s3cr3t
+    missions:
+      - Example.Altis
+  modded:
+    <<: *vanilla
+    name: My Modded Server
+    mods:
+      - example

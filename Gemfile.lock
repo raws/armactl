@@ -1,0 +1,39 @@
+PATH
+  remote: .
+  specs:
+    armactl (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    diff-lcs (1.3)
+    fakefs (0.11.3)
+    rake (12.2.1)
+    rspec (3.7.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
+    rspec-core (3.7.0)
+      rspec-support (~> 3.7.0)
+    rspec-expectations (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-mocks (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-support (3.7.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  armactl!
+  fakefs (~> 0.11.3)
+  rake
+  rspec (~> 3.7.0)
+
+RUBY VERSION
+   ruby 2.4.2p198
+
+BUNDLED WITH
+   1.15.4

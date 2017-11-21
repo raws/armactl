@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+root_dir = ARGV[0]
+
+if root_dir
+  $:.unshift File.join(File.dirname(__FILE__), '../lib')
+  require 'armactl'
+
+  ArmaCtl::Initializer.new(root_dir).run
+else
+  $stderr.puts 'usage: armactl init ROOT_DIR'
+  exit 1
+end
